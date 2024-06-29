@@ -1,0 +1,124 @@
+ticket: {
+    id: '36666',
+    key: 'KTLO-307',
+    summary: 'Issues in PE Management UI and Triage UI realted to session expire.',
+    issueType: 'Bug',
+    priority: 'Medium',
+    status: 'To Do',
+    description: 'Issues in Triage'
+}
+worklog: {
+    issueId: '35505',
+    id: '13652',
+    author: 'Ravula Pranay Kumar Reddy',
+    started: '2024-06-24T22:00:00.000-0700',
+    timeSpent: '45m',
+    timeSpentSeconds: 2700,
+    comment: 'Running kafka & nodeRemoval tasks as the env is up.'
+  }
+ CombinedEntity:{
+    [ticket.key + ":" + worklog.author+":" + DDMMYYYY_OF_WORKLOG_IST]: {
+        issueNo: ticket.key,
+        summary: ticket.summary,
+        issueType: ticket.issueType,
+        priority: ticket.priority,
+        status: ticket.status,
+        description: ticket.description,
+        
+        author: worklog.author,
+        date: DDMMYYYY_OF_WORKLOG_IST,
+        totalTimeSpentSecondsInADay: worklog.timeSpentSeconds,
+        comments: worklog.comment (array of comments {comment, timeSpentSeconds, started})
+    }
+    }
+
+
+
+comments array as a string (Ex: 10:30 AM (1h 30m): Comment1\n 1:00 PM (30m).\n 2:30 PM (3h): Comment2\n)
+
+
+1. Excel week-wise plan (Summary as sheet name)
+(week-wise) Effort spent on Jira issues by each author
+
+Jira no                         | data.key
+Summary                         | data.summary
+Author Worklog                  | 
+Total Spent in a week           | 
+Total Spent in seconds          | 
+Status                          | data.status
+IssueType                       | data.issueType
+Priority                        | data.priority
+Description                     | data.description
+
+
+
+2. Excel day-wise plan (Author-Wise as sheet name)
+(day-wise) Effort spent on Jira issues by each author
+
+Author Worklog
+Week Effort (total time spent in a week)
+Jira no
+Jira Title
+Issue Effort (total time spent on an issue by an author)
+Status
+IssueType
+Priority
+Monday Effort [totalTimeSpentSeconds, totalTimeSpent, comments]
+Tuesday Effort [totalTimeSpentSeconds, totalTimeSpent, comments]
+Wednesday Effort [totalTimeSpentSeconds, totalTimeSpent, comments]
+Thursday Effort [totalTimeSpentSeconds, totalTimeSpent, comments]
+Friday Effort [totalTimeSpentSeconds, totalTimeSpent, comments]
+Saturday Effort [totalTimeSpentSeconds, totalTimeSpent, comments]
+Sunday Effort [totalTimeSpentSeconds, totalTimeSpent, comments]
+Description
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Old plan:
+
+My schema: [header]: [subheader]
+
+span header to the width of it's subheaders in the excel
+Author Effort: [Name, totalTimeSpentSeconds, totalTimeSpent]
+issue Effort: [Key along with link, Summary, totalTimeSpentSeconds, totalTimeSpent, status, issueType, Priority]
+WeekTitle1(ex: May 1-May 7 2024 Effort ): [totalTimeSpentSeconds, totalTimeSpent]
+Day1ofWeek1 (ex: Mon May 1 2024): [totalTimeSpentSeconds, totalTimeSpent, comments]
+Day2ofWeek1 (ex: Tue May 2 2024): [totalTimeSpentSeconds, totalTimeSpent, comments]
+...
+Day7ofWeek1 (ex: Sun May 7 2024): [totalTimeSpentSeconds, totalTimeSpent, comments]
+WeekTitle2(ex: May 8-May 14 2024 Effort ): [totalTimeSpentSeconds, totalTimeSpent]
+Day1ofWeek2 (ex: Mon May 8 2024): [totalTimeSpentSeconds, totalTimeSpent, comments]
+Day2ofWeek2 (ex: Tue May 9 2024): [totalTimeSpentSeconds, totalTimeSpent, comments]
+...
+Day7ofWeek2 (ex: Sun May 14 2024): [totalTimeSpentSeconds, totalTimeSpent, comments]
+WeekTitle3(ex: May 15-May 21 2024 Effort ): [totalTimeSpentSeconds, totalTimeSpent]
+Day1ofWeek3 (ex: Mon May 15 2024): [totalTimeSpentSeconds, totalTimeSpent, comments]
+Day2ofWeek3 (ex: Tue May 16 2024): [totalTimeSpentSeconds, totalTimeSpent, comments]
+...
+Day7ofWeek3 (ex: Sun May 21 2024): [totalTimeSpentSeconds, totalTimeSpent, comments]
+
+

@@ -1,0 +1,11 @@
+TODO: Prepare header of Summary sheet
+TODO: Prepare header of Author-Detailed sheet
+TODO: Prepare header of Issue-Detailed sheet
+TODO: Export header of Summary sheet
+
+TODO: Populate Summary sheet within MONDAY_WEEK_START + 7 days
+TODO: Verify Summary sheet within MONDAY_WEEK_START + 7 days
+TODO: Populate Author-Detailed sheet within MONDAY_WEEK_START + 7 days
+TODO: Verify Author-Detailed sheet within MONDAY_WEEK_START + 7 days
+TODO: Populate Issue-Detailed sheet within MONDAY_WEEK_START + 7 days
+TODO: Verify Issue-Detailed sheet within MONDAY_WEEK_START + 7 days
